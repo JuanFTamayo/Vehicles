@@ -52,8 +52,7 @@ namespace Vehicles.API.Data.Entities
         public ICollection<VehiclePhoto> VehiclePhotos { get; set; }
         [Display(Name = "# Fotos")]
         public int VehiclePhotosCount => VehiclePhotos == null ? 0 : VehiclePhotos.Count;
-
-        //TODO: fix the correct path
+        
         [Display(Name = "Foto")]
         public string ImageFullPath => VehiclePhotos == null || VehiclePhotos.Count == 0
             ? $"https://localhost:44345//images/noimage.png"
